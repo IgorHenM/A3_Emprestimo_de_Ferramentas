@@ -1,0 +1,14 @@
+Configurações do banco de dados:
+
+  Tipo: MySQL
+
+  Usuario: root
+  senha: thor
+  host: localhost
+  porta: 3306
+  banco de dados: emprestimo_ferramentas
+
+  tabelas:
+
+  ferramentas - registro de ferramentas
+  amigos - registro de amigos

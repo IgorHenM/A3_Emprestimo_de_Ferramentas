@@ -22,5 +22,7 @@ Onde:
 
 ## Links Úteis: 
 
-- [`Rquisitos`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/Requisitos)
+- [`Requisitos`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/Requisitos)
 - [`Configurações BD`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/DB_config)
+
+  > Projeto em criação

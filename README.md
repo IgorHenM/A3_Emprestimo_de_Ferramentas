@@ -1,18 +1,21 @@
-## Getting Started
+## 🛠️ Projeto de Emprestimo de ferramentas 🛠️ 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+- Contexto: Criar um programa que rode localmente para efetuar e gerenciar empréstimos de ferramentas.
 
-## Folder Structure
+## 👨‍💻 Funcionalidades Básicas:
 
-The workspace contains two folders by default, where:
+`Cadastrar Ferramenta:` Arquivos responsáveis pela funcionalidade são: TelaCadastroFerramenta - Entrada, Cadastro_ferramentas - Processamento, CadastrarFerramentaDAO - Envio para o banco
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+`Cadastrar Amigos:` Arquivos responsáveis pela funcionalidade são: TelaCadastroAmigo - Entrada, Cadastro_Amigos - processamento, CadastroAmigoDAO - Envio para o banco
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📁 Estrutura do Projeto:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- No projeto estamos usando o padrão de arquitetura de software `MVC` onde dividimos o programa em camadas
+- 
+As pastas estão localizadas em:
+- `src/main/java/files`
+Onde:
+ - `DAO:` Pasta responsável por conter os arquivos de CRUD do banco de dados;
+ - `model:` Pasta responsável por conter os arquivos de processamento do programa com gets e sets;
+ - `principal:` Pasta que irá conter a classe principal (método main);
+ - `view:` Pasta que contém as telas front-end do programa;

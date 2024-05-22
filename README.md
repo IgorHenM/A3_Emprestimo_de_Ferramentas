@@ -19,3 +19,8 @@ Onde:
  - `model:` Pasta responsável por conter os arquivos de processamento do programa com gets e sets;
  - `principal:` Pasta que irá conter a classe principal (método main);
  - `view:` Pasta que contém as telas front-end do programa;
+
+## Links Úteis: 
+
+- [`Rquisitos`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/Requisitos)
+- [`Configurações BD`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/DB_config)

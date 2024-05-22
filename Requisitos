@@ -1,0 +1,17 @@
+Requisitos funcionais:
+
+  RF01: Cadastrar Ferramentas(nome, marca, custo de aquisição)
+  RF02: Cadastrar Amigos(nome , telefone)
+  RF03: Registrar emprestimo de uma ou mais ferramentas a um amigo (data de devolução)
+  RF04: Relatar ferramentas 
+  RF05: Relatar custo de compra
+  RF06: Relatar emprestimos ativos 
+  RF07: Relatar emprestimos realizados
+  RF08: Relatar qual amigo mais fez emprestimos
+  RF09: Relatar se um amigo tem alguma ferramenta que não foi devolvida
+
+
+Requisitos não funcionais
+
+  RNF01: Programa de computador
+  RNF02: Funciona localmente

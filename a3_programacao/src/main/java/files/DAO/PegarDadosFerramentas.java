@@ -6,6 +6,9 @@ import java.sql.Connection;
 public class PegarDadosFerramentas extends ConexaoDAO{
     Connection c = Conectar();
 
+    /**
+     * Método responsável por retornar o maior id da tabela ferramentas
+     */
     public int getMaxId() {
         int MaxId = 0;
         try {
@@ -18,7 +21,9 @@ public class PegarDadosFerramentas extends ConexaoDAO{
             return MaxId;
         }
     }
-
+    /**
+     * Método para buscar o id passado como parâmetro
+     */
     public int getId(int id) {
         int cod = 0;
         try {

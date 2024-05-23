@@ -7,6 +7,9 @@ import java.sql.Statement;
 public class PegarDadosAmigos extends ConexaoDAO{
     Connection c = Conectar();
 
+    /**
+     * Método responsável por pegar o maior id da tabela amigos
+     */
     public int getMaxId() {
         int maxid = 0;
         try {

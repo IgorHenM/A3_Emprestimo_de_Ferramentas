@@ -74,12 +74,18 @@ public class TelaCadastroAmigo extends javax.swing.JFrame {
                 .addContainerGap(122, Short.MAX_VALUE))
         );
 
+        /**
+         * Evento do botão cancelar (chama um método)
+         */
         btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 btnCancelarActionPerformed();
             }
         });
 
+        /**
+         * Evento do botão cadastrar
+         */
         btnCadastrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Cadastro_Amigos amigo1 = new Cadastro_Amigos();
@@ -93,17 +99,15 @@ public class TelaCadastroAmigo extends javax.swing.JFrame {
         });
 
         pack();
-    }// </editor-fold>                        
+    }                        
 
+    /**
+     * Método responsável por fechar tela (está sendo chamado pelo botão cancelar)
+     */
     public void btnCancelarActionPerformed() {
         this.dispose();
     }
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -120,9 +124,7 @@ public class TelaCadastroAmigo extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TelaCadastroAmigo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaCadastroAmigo().setVisible(true);
@@ -130,12 +132,12 @@ public class TelaCadastroAmigo extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
+                         
     private javax.swing.JLabel DescFone;
     private javax.swing.JLabel DescNome;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JTextField inputFone;
     private javax.swing.JTextField inputNome;
-    // End of variables declaration                   
+                       
 }

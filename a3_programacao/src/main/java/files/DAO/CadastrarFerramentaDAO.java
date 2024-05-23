@@ -5,19 +5,17 @@ import javax.swing.JOptionPane;
 
 public class CadastrarFerramentaDAO extends ConexaoDAO{
     /**
-     * 
-     * @param nome
-     * @param marca
-     * @param valor
+     * Método responsável por cadastar ferramenta no banco de dados
      */
     public void Cadastrar(String nome, String marca, float valor) {
-        String sql = "INSERT INTO ferramentas(id, nome, marca, valor) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO ferramentas(id, nome, marca, valor) VALUES (?,?,?,?)";//comando sql
         Connection c = Conectar();
         PegarDadosFerramentas dados = new PegarDadosFerramentas();
 
         try {
+            int id = dados.getMaxId() + 1;//id da ferramenta que será criada
             PreparedStatement st = c.prepareStatement(sql);
-            st.setInt(1, dados.getMaxId() + 1);
+            st.setInt(1, id);
             st.setString(2, nome);
             st.setString(3, marca);
             st.setFloat(4, valor);

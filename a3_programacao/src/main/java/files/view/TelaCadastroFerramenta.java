@@ -1,8 +1,11 @@
 package files.view;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import files.model.Cadastro_Ferramentas;
 
+import javax.swing.JOptionPane;
+
+import files.model.Cadastro_Ferramentas;
 
 public class TelaCadastroFerramenta extends javax.swing.JFrame {
     private javax.swing.JLabel DescMarca;
@@ -13,11 +16,11 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
     private javax.swing.JTextField inputMarca;
     private javax.swing.JTextField inputNome;
     private javax.swing.JTextField inputValor;
-    
+
     public TelaCadastroFerramenta() {
         initComponents();
     }
-                         
+
     private void initComponents() {
 
         DescNome = new javax.swing.JLabel();
@@ -107,44 +110,56 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
                     .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(206, Short.MAX_VALUE))
         );
-
+        /**
+         * Evento do botão cancelar (chama um método)
+         */
         btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 btnCancelarPerformedEvent();
             }
         });
 
+        /**
+         * Evento do botão cadastrar
+         */
         btnCadastrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 Cadastro_Ferramentas addF = new Cadastro_Ferramentas();
+                float custo = 0;
+
                 addF.setNome(inputNome.getText());
                 addF.setMarca(inputMarca.getText());
-                addF.setCusto(Float.parseFloat(inputValor.getText()));
+
+                try{
+                    custo = Float.parseFloat(inputValor.getText());
+                    addF.setCusto(custo);
+                } catch (NumberFormatException e) {
+                    JOptionPane.showMessageDialog(null, "Digite o campo de valor corretamente!");
+                }
                 addF.cadastrarFerramenta();
             }
         });
 
         pack();
-    }     
-    
+    }
+    /**
+     * Método responsável por fechar tela (está sendo chamado pelo botão cancelar)
+     */
     private void btnCancelarPerformedEvent() {
         this.dispose();
     }
 
+    private void inputValorActionPerformed(java.awt.event.ActionEvent evt) {
 
-    private void inputValorActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        
-    }                                          
+    }
 
-    private void inputNomeActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        
-    }                                         
+    private void inputNomeActionPerformed(java.awt.event.ActionEvent evt) {
 
-    /**
-     * @param args the command line arguments
-     */
+    }
+
+    
     public static void main(String args[]) {
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -153,15 +168,19 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaCadastroFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaCadastroFerramenta().setVisible(true);
@@ -169,8 +188,4 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
         });
     }
 
-                         
-    
-                      
 }
-

@@ -1,3 +1,16 @@
+## 👦 Integrantes:
+Igor Henrique Mori
+(1072413641)
+
+Nizio Antônio Martins de Araújo Filho 
+(1072413071)
+
+Brandow Bully Coelho Cezimbra
+(1072320038)
+
+Bruno Ambrozio 
+(1072417985)
+
 ## 🛠️ Projeto de Emprestimo de ferramentas 🛠️ 
 
 - Contexto: Criar um programa que rode localmente para efetuar e gerenciar empréstimos de ferramentas.

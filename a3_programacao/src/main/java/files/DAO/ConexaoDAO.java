@@ -1,4 +1,5 @@
 package files.DAO;
+
 import java.sql.DriverManager;
 import java.sql.Connection;
 
@@ -11,18 +12,17 @@ public class ConexaoDAO {
     private String bd = "emprestimo_ferramentas";
     private String usuario = "root";
     private String senha = "thor";
-    
+
     /**
      * Método de conexão ao banco de dados
      */
     public Connection Conectar() {
         try {
-            Connection c = DriverManager.getConnection("jdbc:mysql://"+ host + ":" + porta + "/" + bd, usuario, senha);
+            Connection c = DriverManager.getConnection("jdbc:mysql://" + host + ":" + porta + "/" + bd, usuario, senha);
             return c;
         } catch (Exception e) {
             return null;
         }
     }
 
-    
 }

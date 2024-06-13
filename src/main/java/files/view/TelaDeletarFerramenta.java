@@ -48,7 +48,7 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas(este pc)\\a3_programacao\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
 
         descId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         descId.setForeground(new java.awt.Color(0, 0, 0));
@@ -75,7 +75,7 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
         btnFerramentas.setBackground(new java.awt.Color(51, 51, 51));
         btnFerramentas.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnFerramentas.setForeground(new java.awt.Color(255, 255, 255));
-        btnFerramentas.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas(este pc)\\a3_programacao\\src\\main\\java\\files\\ImagensA3\\Ferramentas.png")); // NOI18N
+        btnFerramentas.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Ferramentas.png")); // NOI18N
         btnFerramentas.setText("Ver Ferramentas");
 
         btnDeletar.setBackground(new java.awt.Color(102, 102, 102));

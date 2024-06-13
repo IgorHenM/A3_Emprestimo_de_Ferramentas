@@ -58,11 +58,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tableEmpsAtivos.setBackground(new java.awt.Color(102, 102, 102));
         tableEmpsAtivos.setForeground(new java.awt.Color(255, 255, 255));
         tableEmpsAtivos.setModel(new javax.swing.table.DefaultTableModel(
-            emp1.pegarTodosEmprestimosAtivos(),
-            new String [] {
-                "Id", "Amigo", "Ferramenta", "Data do Empréstimo"
-            }
-        ));
+                emp1.pegarTodosEmprestimosAtivos(),
+                new String[] {
+                        "Id", "Amigo", "Ferramenta", "Data do Empréstimo"
+                }));
         tableEmpsAtivos.setFont(new java.awt.Font("Segoe UI", 0, 15));
         jScrollPane1.setViewportView(tableEmpsAtivos);
 
@@ -79,32 +78,40 @@ public class TelaPrincipal extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(433, Short.MAX_VALUE)
-                .addComponent(descEmpsAtivos)
-                .addGap(289, 289, 289)
-                .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1)
+                                .addContainerGap())
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(433, Short.MAX_VALUE)
+                                .addComponent(descEmpsAtivos)
+                                .addGap(289, 289, 289)
+                                .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 131,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(64, 64, 64)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(descEmpsAtivos)
-                    .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(17, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(descEmpsAtivos)
+                                        .addComponent(btnAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 36,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(11, 11, 11)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
 
         jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
-        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
+        
+
+        jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setBackground(new java.awt.Color(51,51,51));
+        jMenu2.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu2.setBackground(new java.awt.Color(51,51,51));
+        jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setBackground(new java.awt.Color(51,51,51));
 
         jMenu1.setText("Ferramentas");
 
@@ -159,13 +166,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         cadastrarFerramenta.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {

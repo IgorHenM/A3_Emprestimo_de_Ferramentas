@@ -42,7 +42,7 @@ public class TelaDeleteAmigo extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas(este pc)\\a3_programacao\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
 
         descId.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         descId.setForeground(new java.awt.Color(0, 0, 0));
@@ -98,7 +98,7 @@ public class TelaDeleteAmigo extends javax.swing.JFrame {
         });
 
         btnAmigos.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        btnAmigos.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas(este pc)\\a3_programacao\\src\\main\\java\\files\\ImagensA3\\Amigos.png")); // NOI18N
+        btnAmigos.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Amigos.png")); // NOI18N
         btnAmigos.setText("Ver Amigos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

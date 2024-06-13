@@ -80,7 +80,7 @@ import files.model.Amigos;
                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
          );
  
-         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas(este pc)\\a3_programacao\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
  
          inputFone.setBackground(new java.awt.Color(102, 102, 102));
          inputFone.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N

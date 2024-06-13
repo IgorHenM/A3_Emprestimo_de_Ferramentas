@@ -64,6 +64,7 @@ Onde:
 
 - [`Requisitos`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/Requisitos)
 - [`Configurações BD`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/DB_config)
+- [`Código do Banco de Dados`](https://github.com/IgorHenM/A3_Emprestimo_de_Ferramentas/blob/main/scriptBD.sql)
 
 
 ## Observações:

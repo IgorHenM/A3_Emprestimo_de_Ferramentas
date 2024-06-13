@@ -70,6 +70,6 @@ Onde:
 ## Observações:
 
 - Quando clonar este repositório, é recomendável adicionar a pasta dele na raiz do Disco C: para que as imagens funcionem
-- Lembre-se de alterar as informações de conexão ao banco de dados em a3_programacao/src/main/java/files/DAO.ConexaoDAO.java
+- Lembre-se de alterar as informações de conexão ao banco de dados em src/main/java/files/DAO.ConexaoDAO.java
 
   > Projeto Concluido!

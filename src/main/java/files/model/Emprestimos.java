@@ -79,7 +79,7 @@ public class Emprestimos extends CadastroEmprestimoDAO {
     public void CadastrarEmprestimo() {
         LocalDate date = LocalDate.now();
         setData_emp(df.format(date));
-        if (dados.getAmigoEmp(getIdAmigo()) > 0) {
+        if (dados.getIdAmigoEmpAtivo(getIdAmigo()) > 0) {
             int select = JOptionPane.showConfirmDialog(null,
                     "O amigo que você tentou emprestar uma ferramenta possui empréstimos ativos. Deseja continuar o empréstimo atual mesmo assim?");
 

@@ -253,6 +253,27 @@ public class PegarDadosEmprestimos extends ConexaoDAO {
         }
     }
     /**
+     * Método responsável por buscar o total de empréstimos ativos de um determinado amigo
+     * 
+     * @param idAmigo Id do Amigo
+     * @return Retorna o total de empréstimos ativos de um amigo
+     */
+    public int getIdAmigoEmpAtivo(int idAmigo) {
+        int contagem = 0;
+        String sql = "SELECT count(id) FROM emprestimos WHERE id_amigo = ? AND ativo = ?";
+        try {
+            PreparedStatement ps = c.prepareStatement(sql);
+            ps.setInt(1, idAmigo);
+            ps.setBoolean(2, true);
+            ResultSet res = ps.executeQuery();
+            res.next();
+            contagem = res.getInt("count(id)");
+            return contagem;
+        } catch (Exception e) {
+            return contagem;
+        }
+    }
+    /**
      * Método responsável por obter a data de um determinado empréstimo
      * 
      * @param id Id do empréstimo

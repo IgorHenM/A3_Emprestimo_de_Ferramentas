@@ -1,6 +1,6 @@
 package files.view;
 
-import javax.swing.ImageIcon;
+
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;

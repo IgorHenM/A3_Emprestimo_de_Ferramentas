@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 
 import files.model.*;
 import files.DAO.PegarDadosFerramentas;
+import files.ImagensA3.Imagens;
 import files.DAO.PegarDadosAmigos;
 
 public class TelaEmprestar extends javax.swing.JFrame {
@@ -52,13 +53,11 @@ public class TelaEmprestar extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
         btnAmigos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAmigos.setIcon(new javax.swing.ImageIcon(
-                "C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Amigos.png")); // NOI18N
+        btnAmigos.setIcon(img1.getFriends()); // NOI18N
         btnAmigos.setText("Amigos");
 
         btnFerramentas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnFerramentas.setIcon(new javax.swing.ImageIcon(
-                "C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Ferramentas.png")); // NOI18N
+        btnFerramentas.setIcon(img1.getTools()); // NOI18N
         btnFerramentas.setText("Ferramentas");
 
         btnEmprestar.setBackground(new java.awt.Color(102, 102, 102));
@@ -124,8 +123,7 @@ public class TelaEmprestar extends javax.swing.JFrame {
                                 .addComponent(btnLimpar)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(
-                "C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+        jLabel1.setIcon(img1.getLogo()); // NOI18N
 
         descIdAmigo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         descIdAmigo.setForeground(new java.awt.Color(0, 0, 0));
@@ -530,6 +528,7 @@ public class TelaEmprestar extends javax.swing.JFrame {
     private Emprestimos emp1 = new Emprestimos();
     private Amigos am1 = new Amigos();
     private Ferramentas fr1 = new Ferramentas();
+    private Imagens img1 = new Imagens();
 
     private PegarDadosAmigos dadosAmigos = new PegarDadosAmigos();
     private PegarDadosFerramentas dadosFerramentas = new PegarDadosFerramentas();

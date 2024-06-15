@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import files.DAO.PegarDadosAmigos;
+import files.ImagensA3.Imagens;
 import files.model.Amigos;
 
 /**
@@ -80,8 +81,7 @@ public class TelaCadastroModificaAmigo extends javax.swing.JFrame {
 
         btnAmigos.setBackground(new java.awt.Color(102, 102, 102));
         btnAmigos.setForeground(new java.awt.Color(255, 255, 255));
-        btnAmigos.setIcon(new javax.swing.ImageIcon(
-                "C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Amigos.png")); // NOI18N
+        btnAmigos.setIcon(img1.getFriends()); // NOI18N
         btnAmigos.setText("Ver Amigos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -124,8 +124,7 @@ public class TelaCadastroModificaAmigo extends javax.swing.JFrame {
                                 .addComponent(btnDeletar)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(
-                "C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+        jLabel1.setIcon(img1.getLogo()); // NOI18N
 
         descId.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         descId.setForeground(new java.awt.Color(0, 0, 0));
@@ -454,6 +453,7 @@ public class TelaCadastroModificaAmigo extends javax.swing.JFrame {
 
     private PegarDadosAmigos dados = new PegarDadosAmigos();
     private Amigos am1 = new Amigos();
+    private Imagens img1 = new Imagens();
 
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancelar;

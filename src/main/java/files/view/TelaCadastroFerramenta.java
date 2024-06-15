@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package files.view;
+import files.ImagensA3.Imagens;
 import files.model.Ferramentas;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 /**
  *
@@ -92,7 +94,7 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\A3_Emprestimo_de_Ferramentas\\src\\main\\java\\files\\ImagensA3\\Logo3.png")); // NOI18N
+        jLabel1.setIcon(img1.getLogo()); // NOI18N
 
         inputNome.setBackground(new java.awt.Color(102, 102, 102));
         inputNome.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
@@ -377,6 +379,7 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify  
     private Ferramentas fr1 = new Ferramentas();
+    private Imagens img1 = new Imagens();
 
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancelar;

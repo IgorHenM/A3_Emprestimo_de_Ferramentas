@@ -46,7 +46,8 @@ public class TelaEmprestar extends javax.swing.JFrame {
 
         setTitle("Emprestar Ferramenta");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

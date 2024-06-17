@@ -26,8 +26,9 @@ public class TelaHistoricoEmprestimos extends javax.swing.JFrame {
         btnAtualizar = new javax.swing.JButton();
 
         setTitle("Histórico de Todos os Empréstimos");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 

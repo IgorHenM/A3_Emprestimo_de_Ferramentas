@@ -46,8 +46,8 @@ public class TelaConcluir extends javax.swing.JFrame {
 
         setBackground(new java.awt.Color(51,51,51));
 
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         selectEmprestimo.setModel(new javax.swing.DefaultComboBoxModel<>(emp1.pegarEmprestimosAtivos()));
 

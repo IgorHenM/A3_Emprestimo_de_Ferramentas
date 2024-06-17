@@ -7,11 +7,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 public class PegarDadosFerramentas extends ConexaoDAO {
-    private Connection c = Conectar();
+    private Connection c = Conectar(); //conexão com o bd
 
     public int getCount(String condition) {
         int count = 0;
 
+        /*
+         * método para obter a contagem de ferramentas com ou sem edição
+         */
         if (condition == null || condition.equals("")) {
             try {
                 Statement st = c.createStatement();
@@ -40,6 +43,8 @@ public class PegarDadosFerramentas extends ConexaoDAO {
 
     /**
      * Método responsável por retornar o maior id da tabela ferramentas
+     * @param condition
+     * @return
      */
     public int getMaxId(String condition) {
         int MaxId = 0;
@@ -69,6 +74,11 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método responsável por obter o menor id
+     * @param condition
+     * @return
+     */
     public int getMinId(String condition) {
         int MinId = 0;
         
@@ -103,7 +113,7 @@ public class PegarDadosFerramentas extends ConexaoDAO {
     public int getId(int id, String condition) {
         int cod = 0;
         if (condition == null || condition.equals("")) {
-            try {
+            try { 
                 Statement st = c.createStatement();
                 ResultSet res = st.executeQuery("SELECT id FROM ferramentas WHERE id = " + id);
                 res.next();
@@ -128,6 +138,9 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método para buscar as ferramentas pelo id
+     */
     public String getNome(int id) {
         String nome = null;
         try {
@@ -141,6 +154,9 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método para obter a marca das ferramentas pelo id
+     */
     public String getMarca(int id) {
         String marca = null;
         try {
@@ -154,6 +170,9 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método para obter o valor das ferramentas pelo id
+     */
     public double getCusto(int id) {
         double custo = 0;
         try {
@@ -167,6 +186,9 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método para obter o status das ferramentas pelo id
+     */
     public String getStatus(int id) {
         String status = null;
         try {
@@ -180,6 +202,9 @@ public class PegarDadosFerramentas extends ConexaoDAO {
         }
     }
 
+    /*
+     * método para obter o custo total de todas as ferramentas
+     */
     public double getCustoTotal() {
         double total = 0;
         try {

@@ -9,9 +9,11 @@ public class histEmp {
     private String idEmprestimo;
     private boolean atvEmprestimo;
 
-
+    /*
+     * getters e setters
+     */
     public String getAtvEmprestimo() {
-        return atvEmprestimo ? "Disponível" : "Indisponível";
+        return atvEmprestimo ? "Disponível" : "Indisponível"; // retorna o bool de atividade do impréstimo para string
     }
 
     public void setAtvEmprestimo(boolean atvEmprestimo) {

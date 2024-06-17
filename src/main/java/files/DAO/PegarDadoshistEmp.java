@@ -8,11 +8,11 @@
 
         import files.model.histEmp;
 
-
+        
         public class PegarDadoshistEmp extends ConexaoDAO { 
-            private Connection c = Conectar();
+            private Connection c = Conectar(); //conexão com o bd
             
-
+            //método para retornar a lista de empréstimo de um certo amigo
             public List<histEmp> getEmprestimos(int idAmigo) {
                 List<histEmp> emprestimos = new ArrayList<>();
                 String sql = "SELECT emprestimos.id AS idEmprestimo, " +
@@ -24,9 +24,10 @@
                 "JOIN ferramentas ON emprestimos.id_ferramenta = ferramentas.id " +
                 "WHERE amigos.id = " + idAmigo;
                 try {
-                    Statement st = c.createStatement();
-                    ResultSet res = st.executeQuery(sql);
+                    Statement st = c.createStatement(); //statement para executar a consulta (query)
+                    ResultSet res = st.executeQuery(sql); //execução da consulta
                     while (res.next()) {
+                        //criação de um objeto "emp" para cada informação retornada
                         histEmp emp = new histEmp();
                         emp.setIdAmigo(res.getInt("idAmigo"));
                         emp.setIdFerramenta(res.getInt("idFerramenta"));
@@ -37,8 +38,8 @@
                         emprestimos.add(emp);
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    e.printStackTrace(); //stacktrace para caso apresente erros
                 }
-                return emprestimos;
+                return emprestimos; //retorna a lista de empréstimos
             }
         }

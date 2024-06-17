@@ -44,7 +44,8 @@ public class TelaCadastroFerramenta extends javax.swing.JFrame {
 
         setTitle("Cadastrar Ferramentas");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

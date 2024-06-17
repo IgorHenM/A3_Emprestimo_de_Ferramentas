@@ -41,7 +41,8 @@ public class TelaAmigos extends javax.swing.JFrame {
 
         setTitle("Amigos");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 

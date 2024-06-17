@@ -31,8 +31,9 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         setTitle("Empréstimo de um Amigo");
 
         jScrollPane1.setViewportView(jTable1);
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        
+        //Dispose Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Tela");
         setBackground(new java.awt.Color(102, 102, 102));
 

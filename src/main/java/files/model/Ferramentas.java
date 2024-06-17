@@ -1,5 +1,6 @@
 package files.model;
 
+//import das classes para operação em BD e com diálogos
 import files.DAO.CadastrarFerramentaDAO;
 import files.DAO.PegarDadosFerramentas;
 import files.DAO.PegarDadosEmprestimos;
@@ -7,6 +8,7 @@ import files.DAO.GerenciarFerramentaDAO;
 import java.text.NumberFormat;
 import javax.swing.JOptionPane;
 
+//classe ferramentas herda a DAO de cadastros de ferramenta para utilizar os métodos de cadastro
 public class Ferramentas extends CadastrarFerramentaDAO {
 
     /**
@@ -98,6 +100,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         }
     }
 
+    /**
+     * Método para pegar os dados das ferramentas em formato de array
+     */
     public String[] pegarDadosFerramentasArray() {
         int count = fr1.getCount(null);
         int minId = fr1.getMinId(null);
@@ -105,6 +110,7 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         String[] dadosFerramentas = new String[count];
         int controle = minId;
 
+        // Preenche o array com os dados das ferramentas
         for (int i = 0; i < dadosFerramentas.length; i++) {
             if (fr1.getId(controle, null) > 0) {
                 dadosFerramentas[i] = fr1.getId(controle, null) + "  " + fr1.getNome(controle) + "  "
@@ -121,6 +127,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         return dadosFerramentas;
     }
 
+    /*
+     * método para pegar as Ferramentas disponíveis
+     */
     public String[] pegarFerramentasDisponiveis() {
         int count = fr1.getCount("disponivel");// criar ou modificar o método getCount para retornar apenas a contagem
                                                // das ferramentas disponiveis.
@@ -129,6 +138,7 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         String[] ferramentasDisponiveis = new String[count];
         int controle = minId;
 
+        // Preenche o array com as ferramentas disponíveis
         for (int i = 0; i < ferramentasDisponiveis.length; i++) {
             if (fr1.getId(controle, "disponivel") > 0) {
                 ferramentasDisponiveis[i] = fr1.getId(controle, "disponivel") + "  " + fr1.getNome(controle) + "  "
@@ -143,6 +153,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         return ferramentasDisponiveis;
     }
 
+    /**
+     * Método para retornar os dados de uma ferramenta específica pelo id e status "indisponível"
+     */
     public String[][] pegarDadosFerramentaUnitario(int cod) {
         String[][] dadosFerramenta = {
                 { fr1.getId(cod, "indisponivel") + "", fr1.getNome(cod), fr1.getMarca(cod), fr1.getCusto(cod) + "" } };
@@ -150,6 +163,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         return dadosFerramenta;
     }
 
+    /**
+     * Método que retornar dados de uma certa ferramenta pelo id sem status específico
+     */
     public String[][] pegarDadosFerramentaUnitarioNormal(int cod) {
         String[][] dadosFerramenta = {
                 { fr1.getId(cod, null) + "", fr1.getNome(cod), fr1.getMarca(cod), fr1.getCusto(cod) + "",
@@ -158,7 +174,11 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         return dadosFerramenta;
     }
 
+    /*
+     * método para modificar os dados de uma ferramenta
+     */
     public void modificarFerramenta() {
+        //verifica a validade das inforamações
         if (getId() > 0 && !getNome().isEmpty() && !getNome().isBlank() && !getMarca().isEmpty()
                 && !getMarca().isBlank() && getCusto() > 0 || !fr1.getNome(getId()).equals(getNome())
                 || !fr1.getMarca(getId()).equals(getMarca()) || fr1.getCusto(getId()) != getCusto()) {
@@ -174,7 +194,11 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         }
     }
 
+    /*
+     * método para deletar uma ferramenta
+     */
     public void deletarFerramenta() {
+        //verifica se a ferramenta está relacionada a um empréstimo, e caso estiver, não permite a exclusão
         if (fr1.getId(getId(), null) > 0 && emp1.getFerramentaEmp(getId()) == 0) {
             modFerramenta.deletarFerramenta(getId());
             JOptionPane.showMessageDialog(null, "Registro de ferramenta deletado com sucesso!");
@@ -186,6 +210,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         }
     }
 
+    /*
+     * método para pegar as informações das Ferramentas
+     */
     public String[][] pegarTodasFerramentas() {
         int count = fr1.getCount(null);
         int minId = fr1.getMinId(null);
@@ -193,6 +220,7 @@ public class Ferramentas extends CadastrarFerramentaDAO {
 
         int controle = minId;
 
+        //completa o array com os dados das ferramentas
         for (int i = 0; i < ferramentas.length; i++) {
             for (int j = 0; j < 5; j++) {
                 if (fr1.getId(controle, null) > 0) {
@@ -214,8 +242,9 @@ public class Ferramentas extends CadastrarFerramentaDAO {
         return ferramentas;
     }
 
-    
-
+    /*
+     * método para pegar o valor total das ferramentas
+     */
     public String valueTotal() {
         double valor = fr1.getCustoTotal();
 

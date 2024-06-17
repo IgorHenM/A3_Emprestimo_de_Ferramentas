@@ -41,7 +41,8 @@ public class TelaFerramentas extends javax.swing.JFrame {
 
         setTitle("Ferramentas");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        //Dispose alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 

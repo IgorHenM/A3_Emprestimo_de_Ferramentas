@@ -51,8 +51,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItem7.setText("jMenuItem7");
 
-        // Dispose Alterado
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        // EXIT Alterado
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 

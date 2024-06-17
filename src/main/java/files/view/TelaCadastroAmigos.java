@@ -1,6 +1,5 @@
 package files.view;
 
-
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.event.ActionEvent;
@@ -35,11 +34,9 @@ public class TelaCadastroAmigos extends javax.swing.JFrame {
         descNome = new javax.swing.JLabel();
         descFone = new javax.swing.JLabel();
 
-        
-
         setTitle("Cadastrar Amigo");
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
@@ -298,7 +295,7 @@ public class TelaCadastroAmigos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify
     private Amigos am1 = new Amigos();
-    private Imagens img1 = new Imagens(); 
+    private Imagens img1 = new Imagens();
 
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCancelar;

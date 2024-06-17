@@ -38,7 +38,7 @@ public class TelaDeleteAmigo extends javax.swing.JFrame {
 
         setTitle("Deletar Registro de Amigos");
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

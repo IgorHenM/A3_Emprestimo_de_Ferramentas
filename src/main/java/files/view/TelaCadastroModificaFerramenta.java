@@ -45,7 +45,7 @@ public class TelaCadastroModificaFerramenta extends javax.swing.JFrame {
 
         setTitle("Cadastrar ou Modificar Ferramentas");
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -56,8 +56,7 @@ public class TelaCadastroModificaFerramenta extends javax.swing.JFrame {
         btnFerramentas.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         btnFerramentas.setForeground(new java.awt.Color(255, 255, 255));
         btnFerramentas.setIcon(img1.getTools()); // NOI18N
-        btnFerramentas.setText("Ver Ferramentas");//corrigir imagens
-        
+        btnFerramentas.setText("Ver Ferramentas");// corrigir imagens
 
         btnCadastrar.setBackground(new java.awt.Color(102, 102, 102));
         btnCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N

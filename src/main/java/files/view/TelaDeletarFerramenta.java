@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package files.view;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.event.DocumentEvent;
@@ -25,7 +26,6 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
         initComponents();
     }
 
-                            
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -41,11 +41,11 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
 
         setTitle("Deletar Ferramentas");
 
-        tableFerramenta.setForeground(new java.awt.Color(255,255,255));
+        tableFerramenta.setForeground(new java.awt.Color(255, 255, 255));
 
-        inputId.setForeground(new java.awt.Color(255,255,255));
+        inputId.setForeground(new java.awt.Color(255, 255, 255));
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -65,13 +65,12 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
 
         tableFerramenta.setBackground(new java.awt.Color(51, 51, 51));
         tableFerramenta.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Id", "Nome", "Marca", "Custo", "Status"
-            }
-        ));
+                },
+                new String[] {
+                        "Id", "Nome", "Marca", "Custo", "Status"
+                }));
         jScrollPane1.setViewportView(tableFerramenta);
 
         btnFerramentas.setBackground(new java.awt.Color(51, 51, 51));
@@ -93,75 +92,84 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 218, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(descId)
-                        .addGap(18, 18, 18)
-                        .addComponent(inputId, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 218, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(descId)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(inputId, javax.swing.GroupLayout.PREFERRED_SIZE, 70,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout
+                                                .createSequentialGroup()
+                                                .addGroup(jPanel1Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(descFerramenta)
+                                                        .addComponent(jScrollPane1,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 686,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(176, 176, 176))))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1)
+                                .addGap(415, 415, 415)
+                                .addComponent(btnDeletar)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnFerramentas)
+                                .addGap(150, 150, 150))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(descFerramenta)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(176, 176, 176))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(415, 415, 415)
-                .addComponent(btnDeletar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnFerramentas)
-                .addGap(150, 150, 150))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(431, 431, 431)
-                    .addComponent(btnCancelar)
-                    .addContainerGap(559, Short.MAX_VALUE)))
-        );
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(431, 431, 431)
+                                        .addComponent(btnCancelar)
+                                        .addContainerGap(559, Short.MAX_VALUE))));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(btnFerramentas)
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(descId)
-                    .addComponent(inputId, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
-                .addComponent(descFerramenta)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnDeletar)
-                        .addGap(71, 71, 71))))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(420, Short.MAX_VALUE)
-                    .addComponent(btnCancelar)
-                    .addGap(71, 71, 71)))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(101, 101, 101)
+                                .addComponent(btnFerramentas)
+                                .addGap(26, 26, 26)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(descId)
+                                        .addComponent(inputId, javax.swing.GroupLayout.PREFERRED_SIZE, 37,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(25, 25, 25)
+                                .addComponent(descFerramenta)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28,
+                                        Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(jLabel1)
+                                                        .addContainerGap())
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(btnDeletar)
+                                                        .addGap(71, 71, 71))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                        jPanel1Layout.createSequentialGroup()
+                                                .addContainerGap(420, Short.MAX_VALUE)
+                                                .addComponent(btnCancelar)
+                                                .addGap(71, 71, 71))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-            btnDeletar.setEnabled(false);
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        btnDeletar.setEnabled(false);
 
         inputId.getDocument().addDocumentListener(new DocumentListener() {
             public void insertUpdate(DocumentEvent evt) {
@@ -176,21 +184,19 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
                 if (id > 0 && dados.getId(id, null) > 0) {
                     btnDeletar.setEnabled(true);
                     tableFerramenta.setModel(new javax.swing.table.DefaultTableModel(
-                        fr1.pegarDadosFerramentaUnitarioNormal(id),
-                        new String [] {
-                            "Id", "Nome", "Marca", "Custo", "Status"
-                        }
-                    ));
+                            fr1.pegarDadosFerramentaUnitarioNormal(id),
+                            new String[] {
+                                    "Id", "Nome", "Marca", "Custo", "Status"
+                            }));
                 } else {
                     btnDeletar.setEnabled(false);
                     tableFerramenta.setModel(new javax.swing.table.DefaultTableModel(
-                        new Object[][] {
+                            new Object[][] {
 
-                        },
-                        new String [] {
-                            "Id", "Nome", "Marca", "Custo", "Status"
-                        }
-                    ));
+                            },
+                            new String[] {
+                                    "Id", "Nome", "Marca", "Custo", "Status"
+                            }));
                 }
             }
 
@@ -206,21 +212,19 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
                 if (id > 0 && dados.getId(id, null) > 0) {
                     btnDeletar.setEnabled(true);
                     tableFerramenta.setModel(new javax.swing.table.DefaultTableModel(
-                        fr1.pegarDadosFerramentaUnitarioNormal(id),
-                        new String [] {
-                            "Id", "Nome", "Marca", "Custo", "Status"
-                        }
-                    ));
+                            fr1.pegarDadosFerramentaUnitarioNormal(id),
+                            new String[] {
+                                    "Id", "Nome", "Marca", "Custo", "Status"
+                            }));
                 } else {
                     btnDeletar.setEnabled(false);
                     tableFerramenta.setModel(new javax.swing.table.DefaultTableModel(
-                        new Object[][] {
-                            
-                        },
-                        new String [] {
-                            "Id", "Nome", "Marca", "Custo", "Status"
-                        }
-                    ));
+                            new Object[][] {
+
+                            },
+                            new String[] {
+                                    "Id", "Nome", "Marca", "Custo", "Status"
+                            }));
                 }
             }
 
@@ -258,24 +262,30 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
             }
         });
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>
 
     /**
      * @param args the command line arguments
      */
 
-     public void btnCancelarActionPerformed() {
+    public void btnCancelarActionPerformed() {
         this.dispose();
-     }
-     public void reload() {
+    }
+
+    public void reload() {
         this.dispose();
         new TelaDeletarFerramenta().setVisible(true);
-     }
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -285,15 +295,19 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaDeletarFerramenta.class.getName())
+                    .log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -303,11 +317,11 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify  
-    private Ferramentas fr1 = new Ferramentas(); 
+    // Variables declaration - do not modify
+    private Ferramentas fr1 = new Ferramentas();
     private PegarDadosFerramentas dados = new PegarDadosFerramentas();
     private Imagens img1 = new Imagens();
-    
+
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnDeletar;
     private javax.swing.JButton btnFerramentas;
@@ -318,6 +332,5 @@ public class TelaDeletarFerramenta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableFerramenta;
-    // End of variables declaration                   
+    // End of variables declaration
 }
-

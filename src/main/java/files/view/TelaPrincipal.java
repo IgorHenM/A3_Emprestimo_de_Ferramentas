@@ -51,7 +51,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItem7.setText("jMenuItem7");
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -105,14 +105,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                                 .addContainerGap()));
 
         jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
-        
 
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu1.setBackground(new java.awt.Color(51,51,51));
+        jMenu1.setBackground(new java.awt.Color(51, 51, 51));
         jMenu2.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu2.setBackground(new java.awt.Color(51,51,51));
+        jMenu2.setBackground(new java.awt.Color(51, 51, 51));
         jMenu3.setForeground(new java.awt.Color(255, 255, 255));
-        jMenu3.setBackground(new java.awt.Color(51,51,51));
+        jMenu3.setBackground(new java.awt.Color(51, 51, 51));
 
         jMenu1.setText("Ferramentas");
 

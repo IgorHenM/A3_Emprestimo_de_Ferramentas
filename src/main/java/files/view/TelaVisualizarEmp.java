@@ -5,17 +5,16 @@ import javax.swing.table.DefaultTableModel;
 import files.DAO.PegarDadoshistEmp;
 import files.model.histEmp;
 
-
 /**
  *
  * @author Brandow
  */
 public class TelaVisualizarEmp extends javax.swing.JFrame {
 
-
     public TelaVisualizarEmp() {
         initComponents();
-    }                       
+    }
+
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -31,8 +30,8 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         setTitle("Empréstimo de um Amigo");
 
         jScrollPane1.setViewportView(jTable1);
-        
-        //Dispose Alterado
+
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setName("Tela");
         setBackground(new java.awt.Color(102, 102, 102));
@@ -42,24 +41,23 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         panelAmigo.setPreferredSize(new java.awt.Dimension(1080, 520));
         panelAmigo.setVerifyInputWhenFocusTarget(false);
 
-        tablesAmigo.setBackground(new java.awt.Color(102,102,102));
+        tablesAmigo.setBackground(new java.awt.Color(102, 102, 102));
         tablesAmigo.setForeground(new java.awt.Color(255, 255, 255));
 
         tablesAmigo.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                
-            },
-            new String [] {
-                "id Emp.", "id Amigo", "Amigo", "id Ferra.", "Ferramenta", "Disp.?"
-            }
-        ) {
+                new Object[][] {
 
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                },
+                new String[] {
+                        "id Emp.", "id Amigo", "Amigo", "id Ferra.", "Ferramenta", "Disp.?"
+                }) {
+
+            boolean[] canEdit = new boolean[] {
+                    false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane2.setViewportView(tablesAmigo);
@@ -75,7 +73,7 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         });
 
         btnConsultar.setText("Consultar");
-        btnConsultar.setForeground(new java.awt.Color(0,0,0));
+        btnConsultar.setForeground(new java.awt.Color(0, 0, 0));
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
@@ -83,68 +81,70 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         });
 
         btnAmigo.setText("Amigos");
-        btnAmigo.setForeground(new java.awt.Color(0,0,0));
+        btnAmigo.setForeground(new java.awt.Color(0, 0, 0));
         btnAmigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 new TelaAmigos().setVisible(true);
             }
         });
 
-
         javax.swing.GroupLayout panelAmigoLayout = new javax.swing.GroupLayout(panelAmigo);
         panelAmigo.setLayout(panelAmigoLayout);
         panelAmigoLayout.setHorizontalGroup(
-            panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2)
-            .addGroup(panelAmigoLayout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(labAmigo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(btnConsultar)
-                .addGap(45,45,45)
-                .addComponent(btnAmigo)
-                .addContainerGap(525, Short.MAX_VALUE))
-        );
+                panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jScrollPane2)
+                        .addGroup(panelAmigoLayout.createSequentialGroup()
+                                .addGap(87, 87, 87)
+                                .addComponent(labAmigo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 91,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(66, 66, 66)
+                                .addComponent(btnConsultar)
+                                .addGap(45, 45, 45)
+                                .addComponent(btnAmigo)
+                                .addContainerGap(525, Short.MAX_VALUE)));
         panelAmigoLayout.setVerticalGroup(
-            panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAmigoLayout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
-                .addGroup(panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labAmigo)
-                    .addComponent(textAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnConsultar)
-                    .addComponent(btnAmigo))
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+                panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAmigoLayout.createSequentialGroup()
+                                .addContainerGap(29, Short.MAX_VALUE)
+                                .addGroup(
+                                        panelAmigoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(labAmigo)
+                                                .addComponent(textAmigo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnConsultar)
+                                                .addComponent(btnAmigo))
+                                .addGap(27, 27, 27)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panelAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(panelAmigo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(panelAmigo, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         getAccessibleContext().setAccessibleName("Histórico de Empréstimos por Cliente e Ferramenta");
 
         pack();
         setLocationRelativeTo(null);
-    }                   
+    }
 
-    private void textAmigoActionPerformed(java.awt.event.ActionEvent evt) {                                          
-    }                                                                                  
+    private void textAmigoActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {
-        
+
         int idAmigo = Integer.parseInt(textAmigo.getText());
 
         PegarDadoshistEmp dao = new PegarDadoshistEmp();
@@ -156,13 +156,13 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tablesAmigo.getModel();
         model.setRowCount(0);
         for (histEmp emp : emprestimos) {
-            model.addRow(new Object[]{
-                emp.getIdEmprestimo(),
-                emp.getIdAmigo(),
-                emp.getAmigo(),
-                emp.getIdFerramenta(),
-                emp.getFerramenta(),
-                emp.getAtvEmprestimo(),
+            model.addRow(new Object[] {
+                    emp.getIdEmprestimo(),
+                    emp.getIdAmigo(),
+                    emp.getAmigo(),
+                    emp.getIdFerramenta(),
+                    emp.getFerramenta(),
+                    emp.getAtvEmprestimo(),
             });
         }
     }
@@ -176,13 +176,17 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaVisualizarEmp.class.getName()).log(java.util.logging.Level.SEVERE,
+                    null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -200,5 +204,5 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
     private javax.swing.JLabel labAmigo;
     private javax.swing.JPanel panelAmigo;
     private javax.swing.JTable tablesAmigo;
-    private javax.swing.JTextField textAmigo;              
+    private javax.swing.JTextField textAmigo;
 }

@@ -46,7 +46,7 @@ public class TelaEmprestar extends javax.swing.JFrame {
 
         setTitle("Emprestar Ferramenta");
 
-        //Dispose Alterado
+        // Dispose Alterado
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -435,7 +435,7 @@ public class TelaEmprestar extends javax.swing.JFrame {
 
         btnEmprestar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                
+
                 emp1.setIdAmigo(Integer.parseInt(inputIdAmigo.getText()));
                 emp1.setIdFerramenta(Integer.parseInt(inputIdFerramenta.getText()));
                 emp1.CadastrarEmprestimo();

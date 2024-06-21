@@ -1,3 +1,4 @@
+/*
 package files.view;
 
 import java.util.List;
@@ -5,10 +6,6 @@ import javax.swing.table.DefaultTableModel;
 import files.DAO.PegarDadoshistEmp;
 import files.model.histEmp;
 
-/**
- *
- * @author Brandow
- */
 public class TelaVisualizarEmp extends javax.swing.JFrame {
 
     public TelaVisualizarEmp() {
@@ -206,3 +203,4 @@ public class TelaVisualizarEmp extends javax.swing.JFrame {
     private javax.swing.JTable tablesAmigo;
     private javax.swing.JTextField textAmigo;
 }
+*/
